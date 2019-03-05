@@ -42,7 +42,7 @@ public class AppMetricaModule extends ReactContextBaseJavaModule {
             Application application = activity.getApplication();
             YandexMetrica.enableActivityAutoTracking(application);
         }
-        YandexMetricaPush.init(getApplicationContext());
+        YandexMetricaPush.init(getReactApplicationContext().getApplicationContext());
 
     }
 
