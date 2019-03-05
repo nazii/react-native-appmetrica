@@ -17,6 +17,8 @@ import org.json.JSONObject;
 
 import com.yandex.metrica.YandexMetrica;
 import com.yandex.metrica.YandexMetricaConfig;
+import com.yandex.metrica.push.YandexMetricaPush;
+
 
 public class AppMetricaModule extends ReactContextBaseJavaModule {
     final static String ModuleName = "AppMetrica";
@@ -40,6 +42,8 @@ public class AppMetricaModule extends ReactContextBaseJavaModule {
             Application application = activity.getApplication();
             YandexMetrica.enableActivityAutoTracking(application);
         }
+        YandexMetricaPush.init(getApplicationContext());
+
     }
 
     @ReactMethod

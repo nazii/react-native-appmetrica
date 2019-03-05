@@ -1,3 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.doochik.RNAppMetrica">
 
+    <application>
+        <receiver android:name=".SilentPushReceiver">
+            <intent-filter>
+                <!-- Recieve silent push notifications. -->
+                <action android:name="${applicationId}.action.ymp.SILENT_PUSH_RECEIVE"/>
+            </intent-filter>
+        </receiver>
+    </application>
 </manifest>
